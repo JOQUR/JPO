@@ -5,6 +5,7 @@
 
 ManageUsers::ManageUsers()
 {
+    size = readHighestIndex();
 }
 
 
@@ -43,7 +44,7 @@ void ManageUsers::writeXML(std::vector<User*>& user)
         node.setAttribute("Role", user[i]->getRole());
         node.setAttribute("Password", user[i]->getPass());
         node.setAttribute("FullName", user[i]->getFullName());
-        node.setAttribute("ID", user[i]->getID());
+        node.setAttribute("ID", size++);
         root.appendChild(node);
         file.open(QIODevice::WriteOnly | QIODevice::Text);
         QTextStream output(&file);
@@ -69,6 +70,23 @@ void ManageUsers::readXML(void)
     }
     QDomElement root = document.firstChildElement();
 
+}
+
+int ManageUsers::readHighestIndex()
+{
+    QDomDocument document;
+
+    QFile file("D:/jpo-projekt/QuickFix/example.xml");
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)){
+            qDebug() << "Failed to open File";
+    }
+    else {
+        if(!document.setContent(&file)){
+            qDebug() << "Failed to load document";
+        }
+        file.close();
+    }
+    return document.lastChildElement().childNodes().size();
 }
 
 QString ManageUsers::ListElements(QDomElement root, QString tagname, QString attribute)

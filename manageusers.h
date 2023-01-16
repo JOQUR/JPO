@@ -19,12 +19,14 @@ public:
     void writeXML(std::vector<User*>& user);
     void readXML(void);
     QString readCredentials(QString login, QString attr);
+    int readHighestIndex();
     //TODO:
     //void editUser(std::vector<User>& user);
 
 
 private:
     QDomElement itemele;
+    int size = 0;
     std::vector<QDomElement> xml_elements;
     QDomDocument document;
     QDomElement root;
