@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <adminpanel.h>
+#include <userpanel.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginWindow; }
@@ -23,6 +24,6 @@ private slots:
 private:
     ManageUsers man;
     Ui::LoginWindow *ui;
-    int isUser(QString& login, QString& pass);
+    int isUser(QString& login, QString& pass, QString role);
 };
 #endif // LOGINWINDOW_H

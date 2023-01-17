@@ -13,17 +13,20 @@ SOURCES += \
     main.cpp \
     loginwindow.cpp \
     manageusers.cpp \
-    user.cpp
+    user.cpp \
+    userpanel.cpp
 
 HEADERS += \
     adminpanel.h \
     loginwindow.h \
     manageusers.h \
-    user.h
+    user.h \
+    userpanel.h
 
 FORMS += \
     adminpanel.ui \
-    loginwindow.ui
+    loginwindow.ui \
+    userpanel.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -34,4 +37,5 @@ STATECHARTS += \
     gdf.scxml
 
 DISTFILES += \
-    example.xml
+    example.xml \
+    issues.xml

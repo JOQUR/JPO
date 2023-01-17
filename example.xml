@@ -1,3 +1,5 @@
 <Users>
-
+ <pkierzek FullName="Paweł Kierzek" Role="Admin" ID="0" Password="qwerty"/>
+ <pkierzek2 FullName="Paweł Kierzek2" Role="Student" ID="1" Password="qwerty"/>
+ <qwerty FullName="Paweł Kierzek2" Role="Student" ID="2" Password="qwerty"/>
 </Users>

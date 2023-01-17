@@ -1,5 +1,6 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
+#include "userpanel.h"
 
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,9 +27,13 @@ void LoginWindow::loginSlot(void)
 {
     QString login = ui->login_in->text();
     QString password = ui->pass_in->text();
-    if(isUser(login, password)){
+    if(isUser(login, password, "Admin")){
         AdminPanel* admin = new AdminPanel(this);
         admin->show();
+    }
+    else if(isUser(login, password, "Student")){
+        userpanel* usr = new userpanel(this, login);
+        usr->show();
     }
     else{
         qDebug() << "Wrong Input";
@@ -36,14 +41,14 @@ void LoginWindow::loginSlot(void)
 }
 
 
-int LoginWindow::isUser(QString& login, QString& pass)
+int LoginWindow::isUser(QString& login, QString& pass, QString role)
 {
     if((login == "admin") && (pass == "admin")){
         ui->login_in->setText("");
         ui->pass_in->setText("");
         return 1;
     }
-    else if((pass == man.readCredentials(login, "Password")) && (man.readCredentials(login, "Role") == "Admin")){
+    else if((pass == man.readCredentials(login, "Password")) && (man.readCredentials(login, "Role") == role)){
         ui->login_in->setText("");
         ui->pass_in->setText("");
         return 1;
