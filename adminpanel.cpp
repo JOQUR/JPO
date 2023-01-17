@@ -29,14 +29,9 @@ void AdminPanel::readSlot()
 {
     QStringList list, list2;
     for (int i = 0; i < (int)users.size(); ++i) {
-        qDebug() << users[i]->getFullName();
-        qDebug() << users[i]->getRole();
-        qDebug() << users[i]->getID();
-        qDebug() << "===================";
         list.append(users[i]->getFullName());
         list2.append(users[i]->getLogin());
     }
-    qDebug() << "===================\n\n";
     QStringListModel* model;
     QStringListModel* login;
     login = new QStringListModel(this);

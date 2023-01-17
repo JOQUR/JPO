@@ -1,4 +1,5 @@
 #include "userpanel.h"
+#include "qdatetime.h"
 #include "ui_userpanel.h"
 
 userpanel::userpanel(QWidget *parent, QString login) :
@@ -8,11 +9,26 @@ userpanel::userpanel(QWidget *parent, QString login) :
     ui->setupUi(this);
     ui->user->setText("User: " + login);
     ui->user->adjustSize();
-    ui->curr_date->setText("Today's date: " + ui->calendarWidget->selectedDate().toString("dd/MM/yy"));
-    ui->curr_date->adjustSize();
+    connect(ui->ticket_btn, SIGNAL(clicked()), this, SLOT(ticketSlot()));
+    for(int i = 0; i < SEV_LVLS; ++i){
+        ui->comboBox->addItem(severity[i]);
+    }
 }
 
 userpanel::~userpanel()
 {
     delete ui;
 }
+
+void userpanel::ticketSlot(void)
+{
+    date = QDateTime::currentDateTime();
+    QString formattedTime = date.toString("dd.MM.yyyy hh:mm:ss");
+    qDebug() <<"Actual Date: " <<  formattedTime;
+}
+
+void userpanel::on_ticket_btn_clicked()
+{
+
+}
+
