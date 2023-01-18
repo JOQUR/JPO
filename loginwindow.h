@@ -19,7 +19,6 @@ public:
     ~LoginWindow();
 
 private slots:
-    void on_login_clicked();
     void loginSlot(void);
 
 private:

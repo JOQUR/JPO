@@ -17,13 +17,6 @@ LoginWindow::~LoginWindow()
     delete ui;
 }
 
-
-void LoginWindow::on_login_clicked()
-{
-
-}
-
-
 void LoginWindow::loginSlot(void)
 {
     QString login = ui->login_in->text();

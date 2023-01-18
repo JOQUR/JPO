@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.1, 2023-01-18T12:15:40. -->
+<!-- Written by QtCreator 9.0.1, 2023-01-18T15:32:15. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -76,7 +76,9 @@
     <value type="bool" key="ClangTools.BuildBeforeAnalysis">true</value>
     <value type="QString" key="ClangTools.DiagnosticConfig">Builtin.DefaultTidyAndClazy</value>
     <value type="int" key="ClangTools.ParallelJobs">4</value>
-    <valuelist type="QVariantList" key="ClangTools.SelectedDirs"/>
+    <valuelist type="QVariantList" key="ClangTools.SelectedDirs">
+     <value type="QString">D:/jpo-projekt/QuickFix/QuickFix.pro</value>
+    </valuelist>
     <valuelist type="QVariantList" key="ClangTools.SelectedFiles"/>
     <valuelist type="QVariantList" key="ClangTools.SuppressedDiagnostics"/>
     <value type="bool" key="ClangTools.UseGlobalSettings">true</value>
@@ -243,6 +245,7 @@
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">D:/jpo-projekt/build-QuickFix-Desktop_Qt_6_4_2_MinGW_64_bit-Debug</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
