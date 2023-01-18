@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::StaffPanel *ui;
+    void readXML(void);
 };
 
 #endif // STAFFPANEL_H

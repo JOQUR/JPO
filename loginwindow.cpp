@@ -1,4 +1,5 @@
 #include "loginwindow.h"
+#include "staffpanel.h"
 #include "ui_loginwindow.h"
 #include "userpanel.h"
 
@@ -34,6 +35,10 @@ void LoginWindow::loginSlot(void)
     else if(isUser(login, password, "Student")){
         userpanel* usr = new userpanel(this, login);
         usr->show();
+    }
+    else if(isUser(login, password, "Staff")){
+        StaffPanel* staff = new StaffPanel();
+        staff->show();
     }
     else{
         qDebug() << "Wrong Input";
