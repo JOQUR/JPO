@@ -1,4 +1,6 @@
 #include "user.h"
+
+
 User::User(QString& fullName, QString& login, QString& pass, QString& role, int id)
 {
     this->FullName = fullName;
@@ -29,4 +31,9 @@ QString User::getRole(void)
 int User::getID(void)
 {
     return this->id;
+}
+
+User::~User()
+{
+    delete this;
 }

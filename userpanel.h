@@ -2,6 +2,7 @@
 #define USERPANEL_H
 
 #include "manageTickets.h"
+#include "ticket.h"
 #include "qdatetime.h"
 #include <QMainWindow>
 #define SEV_LVLS 4
@@ -17,6 +18,8 @@ public:
     explicit userpanel(QWidget *parent = nullptr, QString login = "");
     ~userpanel();
     QDateTime date;
+    ManageTickets mant;
+    std::vector<Ticket*> tickets;
 
 private slots:
     void on_ticket_btn_clicked();

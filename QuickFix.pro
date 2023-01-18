@@ -12,20 +12,27 @@ SOURCES += \
     adminpanel.cpp \
     main.cpp \
     loginwindow.cpp \
+    managetickets.cpp \
     manageusers.cpp \
+    staffpanel.cpp \
+    ticket.cpp \
     user.cpp \
     userpanel.cpp
 
 HEADERS += \
     adminpanel.h \
     loginwindow.h \
+    managetickets.h \
     manageusers.h \
+    staffpanel.h \
+    ticket.h \
     user.h \
     userpanel.h
 
 FORMS += \
     adminpanel.ui \
     loginwindow.ui \
+    staffpanel.ui \
     userpanel.ui
 
 # Default rules for deployment.
@@ -38,4 +45,4 @@ STATECHARTS += \
 
 DISTFILES += \
     example.xml \
-    issues.xml
+    tickets.xml

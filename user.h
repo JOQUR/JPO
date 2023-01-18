@@ -7,7 +7,7 @@ class User
 {
 public:
     User(QString& fullName, QString& login, QString& pass, QString& role, int id);
-
+    ~User();
     QString getFullName(void);
     QString getLogin(void);
     QString getPass(void);
