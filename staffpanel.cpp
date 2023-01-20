@@ -30,11 +30,11 @@ void StaffPanel::readXML(void)
         file.close();
     }
     root = document.firstChildElement();
-    ListElements(root, "Tickets", "Title");
+    ListElements(root, "Tickets");
 }
 
 
-void StaffPanel::ListElements(QDomElement root, QString tagname, QString attribute)
+void StaffPanel::ListElements(QDomElement root, QString tagname)
 {
     QDomNodeList items = root.elementsByTagName(tagname);
     qDebug() << "Total Items: " << items.count();
@@ -45,7 +45,11 @@ void StaffPanel::ListElements(QDomElement root, QString tagname, QString attribu
         if(itemnode.isElement()){
             itemele = itemnode.toElement();
             xml_elements.push_back(itemele);
-            qDebug() << itemele.attribute(attribute);
+            ui->Tickets->insertRow(ui->Tickets->rowCount());
+            ui->Tickets->setItem(i, 0, new QTableWidgetItem(itemele.attribute("Title")));
+            ui->Tickets->setItem(i, 1, new QTableWidgetItem(itemele.attribute("Description")));
+            ui->Tickets->setItem(i, 2, new QTableWidgetItem(itemele.attribute("Severity")));
+            ui->Tickets->setItem(i, 3, new QTableWidgetItem(itemele.attribute("Date")));
         }
     }
 }

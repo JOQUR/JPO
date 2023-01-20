@@ -24,7 +24,7 @@ private:
     QDomElement itemele;
     std::vector<QDomElement> xml_elements;
     void readXML(void);
-    void ListElements(QDomElement root, QString tagname, QString attribute);
+    void ListElements(QDomElement root, QString tagname);
 };
 
 #endif // STAFFPANEL_H

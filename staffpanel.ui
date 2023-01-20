@@ -19,15 +19,10 @@
      <rect>
       <x>5</x>
       <y>11</y>
-      <width>411</width>
+      <width>421</width>
       <height>511</height>
      </rect>
     </property>
-    <column>
-     <property name="text">
-      <string>Nowa kolumna</string>
-     </property>
-    </column>
     <column>
      <property name="text">
       <string>Title</string>
@@ -40,7 +35,12 @@
     </column>
     <column>
      <property name="text">
-      <string>Reporter</string>
+      <string>Severity</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Date</string>
      </property>
     </column>
    </widget>
