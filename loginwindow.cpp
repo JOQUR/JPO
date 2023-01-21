@@ -25,7 +25,7 @@ void LoginWindow::loginSlot(void)
         AdminPanel* admin = new AdminPanel(this);
         admin->show();
     }
-    else if(isUser(login, password, "Student")){
+    else if(isUser(login, password, "Employee")){
         userpanel* usr = new userpanel(this, login);
         usr->show();
     }

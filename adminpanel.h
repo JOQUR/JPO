@@ -29,7 +29,7 @@ private slots:
     void saveSlot(void);
 private:
     Ui::AdminPanel *ui;
-    QString rl[MAX_ROLES] = {"Staff", "Student", "Admin"};
+    QString rl[MAX_ROLES] = {"Staff", "Employee", "Admin"};
 };
 
 #endif // ADMINPANEL_H
